@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const tokenfile = require("./tokenfile.json");
 const botconfig = require("./botconfig.json");
 const bot = new Discord.Client({disableEveryone: true});
 const fs = require("fs");
@@ -282,6 +281,6 @@ fs.writeFile("./money.json", JSON.stringify(money),  (err) => {
 
 
 
-bot.login(tokenfile.token);
+bot.login(procces.enc.env.BOT_TOKEN);
 
 
